@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  lalala
-//
-//  Created by adyl CEO on 29/03/2024.
-//
+
 
 import UIKit
 

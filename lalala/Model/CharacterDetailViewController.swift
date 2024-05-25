@@ -8,22 +8,28 @@
 import UIKit
 
 class CharacterDetailViewController: UIViewController {
+    
+    var character: Character?
+    let statusLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupStatusLabel()
+        
+        view.backgroundColor = .white
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupStatusLabel() {
+        view.addSubview(statusLabel)
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            statusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            statusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        ])
+        
+        guard let character = character else {return}
+        statusLabel.text = character.status
     }
-    */
-
 }

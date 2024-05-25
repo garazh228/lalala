@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  lalala
-//
-//  Created by adyl CEO on 29/03/2024.
-//
+
 
 import UIKit
 
@@ -16,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
                 let window = UIWindow(windowScene: windowScene)
                 
-                let nav1 = UINavigationController(rootViewController: UserAuthorizationViewController())
+                let nav1 = UINavigationController(rootViewController: ViewController())
                 
                 window.rootViewController = nav1 
                 
